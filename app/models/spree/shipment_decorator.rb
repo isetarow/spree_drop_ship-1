@@ -1,4 +1,5 @@
 Spree::Shipment.class_eval do
+  self.whitelisted_ransackable_attributes = ['number', 'state']
   # TODO here to fix cancan issue thinking its just Order
   belongs_to :order, class_name: 'Spree::Order', touch: true, inverse_of: :shipments
 

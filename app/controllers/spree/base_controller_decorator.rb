@@ -12,7 +12,7 @@ Spree::BaseController.class_eval do
       record = controller_name.to_sym
     end
     authorize! :supplier, record
-    authorize! action, record
+    authorize! :action, record
   end
 
   def redirect_supplier
