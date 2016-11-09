@@ -1,16 +1,16 @@
 # Spree Drop Ship
 
 
-* This gem is a fork of this [previous fork](https://github.com/mattfran/spree_drop_ship/tree/master)
+* Notice: This [gem](https://github.com/spree-contrib/spree_drop_ship)'s skeleton was on Spree Contrib, and then I forked [this](https://github.com/mattfran/spree_drop_ship/tree/master). Credits to their work, though both were broken and left behind. This is a new version with few changes.
+
+*  current state :
+
  1. fixed the original issue #73 Ransack related `state_eq`
  2. Version Spree `3.1.0`
  3. also some smaller errors from the gem.
 
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_drop_ship.png)](https://travis-ci.org/spree-contrib/spree_drop_ship)
-[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_drop_ship.png)](https://codeclimate.com/github/spree-contrib/spree_drop_ship)
-[![Coverage Status](https://coveralls.io/repos/spree-contrib/spree_drop_ship/badge.png?branch=master)](https://coveralls.io/r/spree-contrib/spree_drop_ship)
-[![Dependency Status](https://gemnasium.com/spree-contrib/spree_drop_ship.png?travis)](https://gemnasium.com/spree-contrib/spree_drop_ship)
+
 
 What is drop shipping?
 
@@ -27,20 +27,6 @@ Spree Drop Ship used with [Spree Marketplace](https://github.com/jdutil/spree_ma
 This is still currently a work in progress, and any input is welcome.
 .
 
-Upgrading
----------
-
-**Warning: Upgrading to Spree 2.2.x & 2.3.x when using this extension is not backwards compatible.
-            I have removed the notion of drop ship orders which payments & commission were previously tracked to.
-            Now suppliers simply manage their shipments, and payments & commission are now linked to a payable object i.e. shipment in this case.
-            This means the previous method of determining a suppliers commission is no longer valid, and you will need to migrate your data accordingly.**
-
-I'm sorry for the inconvenience this may cause, but I've determined for this extension to meet it's most potential I needed to drastically alter the approach
-it was taking.  I'm still undergoing several more radical changes for Spree 2.3.x that involve moving product management from this extension into the spree_marketplace
-extension.  The goal from the beginning of this extension has been for it to be a very light weight and extensible drop shipping solution.  Much of this extension
-has been made obsolete by split shipping, and line item adjustments within Spree Core itself.  Now I feel I can really streamline this extension to take advantage
-of the recent Spree Core changes, and also move the product management into the marketplace extension as that is really more of what product management is inteded for.
-The typical drop shipping scenario would simply be a supplier being able to update their shipments they need to fulfill and nothing more.
 
 Installation
 ------------
@@ -49,7 +35,7 @@ Here's how to install spree_drop_ship into your existing spree site AFTER you've
 
 Add the following to your Gemfile:
 
-    gem 'spree_drop_ship', github: 'spree-contrib/spree_drop_ship'
+    gem 'spree_drop_ship', github: '0bserver07/spree_dp_ship'
 
 Make your bundle happy:
 
@@ -98,13 +84,7 @@ rails s
 Testing
 -------
 
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
-
-```shell
-bundle
-bundle exec rake test_app
-bundle exec rspec spec
-```
+* Needs To be updated
 
 Todo
 ----
@@ -133,9 +113,4 @@ Here are some ways *you* can contribute:
 * by resolving [issues](https://github.com/spree-contrib/spree_drop_ship/issues)
 * by reviewing patches
 
-Donating
---------
 
-Bitcoin donations may be sent to: 1L6akT6Aus9r6Ashw1wDtLg7D8zJCVVZac
-
-Copyright (c) 2012-2014 Jeff Dutil, released under the [New BSD License](https://github.com/spree-contrib/spree_drop_ship/tree/master/LICENSE).

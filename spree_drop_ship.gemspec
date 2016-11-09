@@ -1,20 +1,24 @@
  # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_drop_ship'
-  s.version     = '3.0.1.beta'
-  s.summary     = 'Spree Drop Shipping Extension'
+  s.name        = 'spree_dp_ship'
+  s.version     = '3.1.0'
+  s.summary     = 'Upgraded Spree Drop Shipping Extension'
   s.description = 'Adds drop shipping functionality to Spree stores.'
   s.required_ruby_version = '>= 2.0.0'
 
-  s.author    = 'Jeff Dutil'
-  s.email     = 'JDutil@BurlingtonWebApps.com'
-  s.homepage  = 'http://github.com/JDutil/spree_drop_ship'
+  s.author    = 'Yad Faeq'
+  s.email     = ''
+  s.homepage  = 'https://github.com/0bserver07/spree_dp_ship'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
+
+  s.license   = 'MIT'
+
+
 
   s.add_dependency 'durable_decorator', '~> 0.2.0'
   s.add_dependency 'spree_api'
