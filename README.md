@@ -1,5 +1,12 @@
 # Spree Drop Ship
 
+
+* This gem is a fork of this [previous fork](https://github.com/mattfran/spree_drop_ship/tree/master)
+ 1. fixed the original issue #73 Ransack related `state_eq`
+ 2. Version Spree `3.1.0`
+ 3. also some smaller errors from the gem.
+
+
 [![Build Status](https://travis-ci.org/spree-contrib/spree_drop_ship.png)](https://travis-ci.org/spree-contrib/spree_drop_ship)
 [![Code Climate](https://codeclimate.com/github/spree-contrib/spree_drop_ship.png)](https://codeclimate.com/github/spree-contrib/spree_drop_ship)
 [![Coverage Status](https://coveralls.io/repos/spree-contrib/spree_drop_ship/badge.png?branch=master)](https://coveralls.io/r/spree-contrib/spree_drop_ship)
