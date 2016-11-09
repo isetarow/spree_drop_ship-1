@@ -35,7 +35,7 @@ Here's how to install spree_drop_ship into your existing spree site AFTER you've
 
 Add the following to your Gemfile:
 
-    gem 'spree_drop_ship', github: '0bserver07/spree_dp_ship'
+    gem 'spree_drop_ship', github: '0bserver07/spree_drop_ship'
 
 Make your bundle happy:
 
