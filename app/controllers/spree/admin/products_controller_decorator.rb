@@ -2,6 +2,16 @@ Spree::Admin::ProductsController.class_eval do
 
   before_filter :get_suppliers, only: [:edit, :update]
   before_filter :supplier_collection, only: [:index]
+  create.after :create_after
+
+  def create_after
+    if spree_current_user.supplier?
+      @product.add_supplier!(spree_current_user.supplier)
+    end
+  end
+
+
+
 
   private
 

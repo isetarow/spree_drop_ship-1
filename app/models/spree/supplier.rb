@@ -42,7 +42,6 @@ class Spree::Supplier < Spree::Base
   #==========================================
   # Instance Methods
   scope :active, -> { where(active: true) }
-  scope :approved, -> { where(approved: true) }
 
 
 
