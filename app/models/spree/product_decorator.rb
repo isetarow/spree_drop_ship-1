@@ -3,12 +3,6 @@ Spree::Product.class_eval do
   before_create :add_supplier_to_product
   has_many :suppliers, through: :master
 
-  require "byebug"
-
-  def add_supplier_to_product
-    # byebug
-    # self.add_supplier!()
-  end
 
   def add_supplier!(supplier_or_id)
     supplier = supplier_or_id.is_a?(Spree::Supplier) ? supplier_or_id : Spree::Supplier.find(supplier_or_id)
