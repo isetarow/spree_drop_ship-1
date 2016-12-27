@@ -1,6 +1,6 @@
 Spree::Product.class_eval do
 
-  before_create :add_supplier_to_product
+  # before_create :add_supplier_to_product
   has_many :suppliers, through: :master
 
 
