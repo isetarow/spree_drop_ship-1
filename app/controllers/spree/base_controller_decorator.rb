@@ -15,11 +15,10 @@ Spree::BaseController.class_eval do
     # authorize! :action, record
   end
 
-  def redirect_supplier
-  # require "byebug"
-  # byebug
-    if ['/admin', '/admin/orders', '/admin/authorization_failure'].include?(request.path) && try_spree_current_user.try(:supplier)
-      redirect_to '/admin/shipments' and return false
+    def redirect_supplier
+
+      if ['/admin', '/admin/orders', '/admin/authorization_failure'].include?(request.path) && try_spree_current_user.try(:supplier)
+        redirect_to '/admin/shipments' and return false
+      end
     end
-  end
   end
