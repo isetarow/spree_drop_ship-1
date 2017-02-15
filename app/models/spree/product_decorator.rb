@@ -1,6 +1,5 @@
 Spree::Product.class_eval do
 
-  # before_create :add_supplier_to_product
   has_many :suppliers, through: :master
 
 
@@ -20,13 +19,15 @@ Spree::Product.class_eval do
     suppliers.present?
   end
 
-  # private
+require "byebug"
+  private
 
   def populate_for_supplier!(supplier)
     variants_including_master.each do |variant|
       unless variant.suppliers.pluck(:id).include?(supplier.id)
         variant.suppliers << supplier
-        # supplier.stock_locations.each { |location| location.propagate_variant(variant) }
+        # byebug
+        supplier.stock_locations.each { |location| location.set_up_stock_item(variant) }
       end
     end
   end
