@@ -25,10 +25,20 @@
       <%= form.label :url, Spree::Supplier.human_attribute_name(:url) %>:<br />
       <%= form.text_field :url, :class => 'form-control' %>
     <% end %>
+
+
+
     <%= form.field_container :tax_id, class: ['form-group'] do %>
       <%= form.label :tax_id, Spree::Supplier.human_attribute_name(:tax_id) %>:<br />
       <%= form.text_field :tax_id, :class => 'form-control' %>
     <% end %>
+
+
+    <%= form.field_container :paypal_email, class: ['form-group'] do %>
+      <%= form.label :paypal_email, Spree::Supplier.human_attribute_name(:paypal_email) %>:<br />
+      <%= form.text_field :paypal_email, :class => 'form-control' %>
+    <% end %>
+
     <% if spree_current_user.admin? %>
      <div class="checkbox">
         <%= label_tag :approved do %>
